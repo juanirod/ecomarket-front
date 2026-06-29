@@ -17,6 +17,8 @@ Create a `.env.local` file in this directory:
 
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8084/api/v1
+ADMIN_USER=admin
+ADMIN_PASSWORD=admin
 JWT_SECRET=your_jwt_secret_here
 ```
 
