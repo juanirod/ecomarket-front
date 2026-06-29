@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme inline {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-plus-jakarta);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 158 50% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 158 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 50% 10%;
+    --primary: 158 50% 14%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 158 20% 96%;
+    --secondary-foreground: 158 50% 14%;
+    --muted: 158 10% 94%;
+    --muted-foreground: 158 15% 45%;
+    --accent: 158 20% 90%;
+    --accent-foreground: 158 50% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 158 15% 88%;
+    --input: 158 15% 88%;
+    --ring: 158 50% 14%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 158 30% 6%;
+    --foreground: 158 10% 95%;
+    --card: 158 25% 8%;
+    --card-foreground: 158 10% 95%;
+    --popover: 158 25% 8%;
+    --popover-foreground: 158 10% 95%;
+    --primary: 158 40% 55%;
+    --primary-foreground: 158 50% 6%;
+    --secondary: 158 20% 14%;
+    --secondary-foreground: 158 10% 90%;
+    --muted: 158 15% 14%;
+    --muted-foreground: 158 10% 55%;
+    --accent: 158 20% 16%;
+    --accent-foreground: 158 10% 90%;
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 158 15% 18%;
+    --input: 158 15% 18%;
+    --ring: 158 40% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-plus-jakarta), Arial, sans-serif;
+  }
+}
